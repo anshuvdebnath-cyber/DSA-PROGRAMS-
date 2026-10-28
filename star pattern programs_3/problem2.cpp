@@ -1,10 +1,10 @@
 /*
 WAP THIS PATTERN :-
-    * 
-   * * * 
-  * * * * * 
- * * * * * * * 
-* * * * * * * * * 
+        1 
+      1 2 1 
+    1 2 3 2 1 
+  1 2 3 4 3 2 1 
+1 2 3 4 5 4 3 2 1 
 
 */
 
@@ -15,7 +15,6 @@ int  main()
 {
 int row,col;
 int n=5;
-int subrow;
 
 for(row=1;row<=n;row++)
 {
@@ -29,14 +28,12 @@ for(row=1;row<=n;row++)
     }
 
     if(row>=2){
-        for(subrow=1;subrow=row;subrow++)
+        for(col=row;col>1;col=col-1)
         {
-            for(col=subrow;col>=1;col=col-1)
-            {
-                cout<<col<<" ";
-            }
+            cout<<col-1<<" ";
         }
     }
+    
     cout<<endl;
 }
 return 0;
